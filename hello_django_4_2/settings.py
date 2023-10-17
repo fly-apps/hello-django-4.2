@@ -84,7 +84,9 @@ WSGI_APPLICATION = 'hello_django_4_2.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db()
+    "default": env.db(
+        "DATABASE_URL", default="postgres://postgres:postgres@localhost:5432/hello_django_4_2"
+    )
 }
 
 
